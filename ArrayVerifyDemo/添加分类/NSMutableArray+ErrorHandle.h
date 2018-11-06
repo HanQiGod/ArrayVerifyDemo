@@ -7,7 +7,7 @@
 //  CSDN <https://blog.csdn.net/u010960265>
 //  GitHub <https://github.com/HanQiGod>
 //
-
+ 
 #import <Foundation/Foundation.h>
 
 @interface NSMutableArray (ErrorHandle)
