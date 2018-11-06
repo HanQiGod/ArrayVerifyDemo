@@ -1,6 +1,6 @@
 //
-//  AppDelegate.h
-//  ArrayVerifyDemo
+//  NextVC.h
+//  数组越界
 //
 //  Created by Mr_Han on 2018/9/20.
 //  Copyright © 2018年 Mr_Han. All rights reserved.
@@ -10,10 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface NextVC : UIViewController
 
 @end
-

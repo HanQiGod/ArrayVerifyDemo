@@ -15,6 +15,10 @@
 		7AA4D8DE21532A190001696A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D8DD21532A190001696A /* main.m */; };
 		7AA4D8E821532A190001696A /* ArrayVerifyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D8E721532A190001696A /* ArrayVerifyDemoTests.m */; };
 		7AA4D8F321532A190001696A /* ArrayVerifyDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D8F221532A190001696A /* ArrayVerifyDemoUITests.m */; };
+		7AA4D90721532A4C0001696A /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D90121532A4C0001696A /* NSObject+SwizzleMethod.m */; };
+		7AA4D90821532A4C0001696A /* NSArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D90221532A4C0001696A /* NSArray+ErrorHandle.m */; };
+		7AA4D90921532A4C0001696A /* NSMutableArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D90321532A4C0001696A /* NSMutableArray+ErrorHandle.m */; };
+		7AA4D90C21532A730001696A /* NextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4D90B21532A730001696A /* NextVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		7AA4D8EE21532A190001696A /* ArrayVerifyDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrayVerifyDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA4D8F221532A190001696A /* ArrayVerifyDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayVerifyDemoUITests.m; sourceTree = "<group>"; };
 		7AA4D8F421532A190001696A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AA4D90121532A4C0001696A /* NSObject+SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleMethod.m"; sourceTree = "<group>"; };
+		7AA4D90221532A4C0001696A /* NSArray+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ErrorHandle.m"; sourceTree = "<group>"; };
+		7AA4D90321532A4C0001696A /* NSMutableArray+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ErrorHandle.m"; sourceTree = "<group>"; };
+		7AA4D90421532A4C0001696A /* NSArray+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ErrorHandle.h"; sourceTree = "<group>"; };
+		7AA4D90521532A4C0001696A /* NSObject+SwizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwizzleMethod.h"; sourceTree = "<group>"; };
+		7AA4D90621532A4C0001696A /* NSMutableArray+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ErrorHandle.h"; sourceTree = "<group>"; };
+		7AA4D90A21532A730001696A /* NextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextVC.h; sourceTree = "<group>"; };
+		7AA4D90B21532A730001696A /* NextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +113,13 @@
 		7AA4D8CD21532A160001696A /* ArrayVerifyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7AA4D90021532A4C0001696A /* 添加分类 */,
 				7AA4D8CE21532A160001696A /* AppDelegate.h */,
 				7AA4D8CF21532A160001696A /* AppDelegate.m */,
 				7AA4D8D121532A160001696A /* ViewController.h */,
 				7AA4D8D221532A160001696A /* ViewController.m */,
+				7AA4D90A21532A730001696A /* NextVC.h */,
+				7AA4D90B21532A730001696A /* NextVC.m */,
 				7AA4D8D421532A160001696A /* Main.storyboard */,
 				7AA4D8D721532A190001696A /* Assets.xcassets */,
 				7AA4D8D921532A190001696A /* LaunchScreen.storyboard */,
@@ -130,6 +145,19 @@
 				7AA4D8F421532A190001696A /* Info.plist */,
 			);
 			path = ArrayVerifyDemoUITests;
+			sourceTree = "<group>";
+		};
+		7AA4D90021532A4C0001696A /* 添加分类 */ = {
+			isa = PBXGroup;
+			children = (
+				7AA4D90521532A4C0001696A /* NSObject+SwizzleMethod.h */,
+				7AA4D90121532A4C0001696A /* NSObject+SwizzleMethod.m */,
+				7AA4D90421532A4C0001696A /* NSArray+ErrorHandle.h */,
+				7AA4D90221532A4C0001696A /* NSArray+ErrorHandle.m */,
+				7AA4D90621532A4C0001696A /* NSMutableArray+ErrorHandle.h */,
+				7AA4D90321532A4C0001696A /* NSMutableArray+ErrorHandle.m */,
+			);
+			path = "添加分类";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA4D90921532A4C0001696A /* NSMutableArray+ErrorHandle.m in Sources */,
+				7AA4D90C21532A730001696A /* NextVC.m in Sources */,
 				7AA4D8D321532A160001696A /* ViewController.m in Sources */,
 				7AA4D8DE21532A190001696A /* main.m in Sources */,
 				7AA4D8D021532A160001696A /* AppDelegate.m in Sources */,
+				7AA4D90821532A4C0001696A /* NSArray+ErrorHandle.m in Sources */,
+				7AA4D90721532A4C0001696A /* NSObject+SwizzleMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
